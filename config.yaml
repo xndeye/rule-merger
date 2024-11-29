@@ -24,7 +24,7 @@
       type: http
       url: "https://ruleset.skk.moe/Clash/ip/reject.txt"
       format: txt
-      behavior: ipcidr
+      behavior: classical
 
 - path: output/direct.yaml
   format: yaml
