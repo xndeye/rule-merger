@@ -1,0 +1,232 @@
+
+- path: output/reject.yaml
+  format: yaml
+  behavior: classical
+  upstream:
+    skk_reject:
+      type: http
+      url: "https://ruleset.skk.moe/Clash/non_ip/reject.txt"
+      format: txt
+      behavior: classical
+
+    xndeye_reject:
+      type: http
+      url: "https://raw.githubusercontent.com/xndeye/adblock_list/beta/rule/clash.yaml"
+      format: yaml
+      behavior: domain
+
+- path: output/reject@ip.yaml
+  format: yaml
+  behavior: classical
+  upstream:
+
+    skk_reject_ip:
+      type: http
+      url: "https://ruleset.skk.moe/Clash/ip/reject.txt"
+      format: txt
+      behavior: ipcidr
+
+- path: output/direct.yaml
+  format: yaml
+  behavior: classical
+  upstream:
+    skk_domestic:
+      type: http
+      url: "https://ruleset.skk.moe/Clash/non_ip/domestic.txt"
+      format: txt
+      behavior: classical
+
+    skk_direct_ip:
+      type: http
+      url: "https://ruleset.skk.moe/Clash/non_ip/direct.txt"
+      format: txt
+      behavior: classical
+
+- path: output/direct@ip.yaml
+  format: yaml
+  behavior: classical
+  upstream:
+
+    skk_domestic_ip:
+      type: http
+      url: "https://ruleset.skk.moe/Clash/ip/domestic.txt"
+      format: txt
+      behavior: classical
+
+    skk_china_ip:
+      type: http
+      url: "https://ruleset.skk.moe/Clash/ip/china_ip.txt"
+      format: txt
+      behavior: ipcidr
+
+- path: output/microsoft@cn.yaml
+  format: yaml
+  behavior: classical
+  upstream:
+    skk_microsoft_cdn:
+      type: http
+      url: "https://ruleset.skk.moe/Clash/non_ip/microsoft_cdn.txt"
+      format: txt
+      behavior: classical
+
+    DustinWin_microsoft_cn:
+      type: http
+      url: "https://github.com/DustinWin/ruleset_geodata/releases/download/clash-ruleset/microsoft-cn.yaml"
+      format: yaml
+      behavior: domain
+
+- path: output/apple@cn.yaml
+  format: yaml
+  behavior: classical
+  upstream:
+
+    skk_apple_services:
+      type: http
+      url: "https://ruleset.skk.moe/Clash/non_ip/apple_services.txt"
+      format: txt
+      behavior: classical
+
+    skk_apple_cn:
+      type: http
+      url: "https://ruleset.skk.moe/Clash/non_ip/apple_cn.txt"
+      format: txt
+      behavior: classical
+    
+    skk_apple_cdn:
+      type: http
+      url: "https://ruleset.skk.moe/Clash/domainset/apple_cdn.txt"
+      format: txt
+      behavior: domain
+
+    DustinWin_apple_cn:
+      type: http
+      url: "https://github.com/DustinWin/ruleset_geodata/releases/download/clash-ruleset/apple-cn.yaml"
+      format: yaml
+      behavior: domain
+
+
+- path: output/steam@cn.yaml
+  format: yaml
+  behavior: classical
+  upstream:
+    skk_steam_cn:
+      type: http
+      url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/SteamCN/SteamCN.yaml"
+      format: yaml
+      behavior: classical
+
+- path: output/ai.yaml
+  format: yaml
+  behavior: classical
+  upstream:
+
+    skk_ai:
+      type: http
+      url: "https://ruleset.skk.moe/Clash/non_ip/ai.txt"
+      format: txt
+      behavior: classical
+
+    DustinWin_ai:
+      type: http
+      url: "https://github.com/DustinWin/ruleset_geodata/releases/download/clash-ruleset/ai.yaml"
+      format: yaml
+      behavior: domain
+
+    local_ai:
+      type: file
+      path: local/ai.yaml
+      format: yaml
+      behavior: classical
+
+- path: output/proxy.yaml
+  format: yaml
+  behavior: classical
+  upstream:
+    
+    skk_cdn_domainset:
+      type: http
+      url: "https://ruleset.skk.moe/Clash/domainset/cdn.txt"
+      format: txt
+      behavior: domain
+
+    skk_cdn:
+      type: http
+      url: "https://ruleset.skk.moe/Clash/non_ip/cdn.txt"
+      format: txt
+      behavior: classical
+    
+    skk_stream:
+      type: http
+      url: "https://ruleset.skk.moe/Clash/non_ip/stream.txt"
+      format: txt
+      behavior: classical
+
+    telegram:
+      type: http
+      url: "https://ruleset.skk.moe/Clash/non_ip/telegram.txt"
+      format: txt
+      behavior: classical
+
+    skk_download_domainset:
+      type: http
+      url: "https://ruleset.skk.moe/Clash/domainset/download.txt"
+      format: txt
+      behavior: domain
+
+    skk_download:
+      type: http
+      url: "https://ruleset.skk.moe/Clash/non_ip/download.txt"
+      format: txt
+      behavior: classical
+
+    skk_global:
+      type: http
+      url: "https://ruleset.skk.moe/Clash/non_ip/global.txt"
+      format: txt
+      behavior: classical
+
+    gfw:
+      type: http
+      url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt"
+      format: yaml
+      behavior: domain
+
+- path: output/proxy@ip.yaml
+  format: yaml
+  behavior: classical
+  upstream:
+    
+    skk_domestic_ip:
+      type: http
+      url: "https://ruleset.skk.moe/Clash/ip/domestic.txt"
+      format: txt
+      behavior: classical
+    
+    skk_stream_ip:
+      type: http
+      url: "https://ruleset.skk.moe/Clash/ip/stream.txt"
+      format: txt
+      behavior: classical
+
+    telegram_ip:
+      type: http
+      url: "https://ruleset.skk.moe/Clash/ip/telegram.txt"
+      format: txt
+      behavior: classical
+
+    skk_cdn_ip:
+      type: http
+      url: "https://ruleset.skk.moe/Clash/ip/cdn.txt"
+      format: txt
+      behavior: classical
+
+- path: output/lan@ip.yaml
+  format: yaml
+  behavior: classical
+  upstream:
+    
+    skk_lan:
+      type: http
+      url: "https://ruleset.skk.moe/Clash/ip/lan.txt"
+      format: txt
+      behavior: classical

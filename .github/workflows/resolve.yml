@@ -1,0 +1,47 @@
+name: rule merger
+
+on:
+  schedule:
+    - cron: '0 */12 * * *'
+  workflow_dispatch:
+
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run script
+        run: python rule_merger.py
+
+      - name: Commit Changes
+        id: commit
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 🚀 Update at ${{ steps.commit.outputs.timestamp }}
+          branch: release
+          file_pattern: output/*.*
+          skip_dirty_check: true
+          push_options: '--force'
+          create_branch: true
+          skip_fetch: true
+          skip_checkout: true
+
+      - name: Delete Workflow Runs
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
+          repository: ${{ github.repository }}
+          retain_days: 1
+          keep_minimum_runs: 1
