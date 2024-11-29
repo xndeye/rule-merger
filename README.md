@@ -71,70 +71,70 @@
 
 [reject-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/xndeye/rule-merger/release/reject.yaml
 
-[reject-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/reject.yaml
+[reject-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@release/reject.yaml
 
 [reject@ip-raw]: https://raw.githubusercontent.com/xndeye/rule-merger/refs/heads/release/reject@ip.yaml
 
 [reject@ip-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/xndeye/rule-merger/release/reject@ip.yaml
 
-[reject@ip-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/reject@ip.yaml
+[reject@ip-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@release/reject@ip.yaml
 
 [direct-raw]: https://raw.githubusercontent.com/xndeye/rule-merger/refs/heads/release/direct.yaml
 
 [direct-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/xndeye/rule-merger/release/direct.yaml
 
-[direct-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/direct.yaml
+[direct-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@release/direct.yaml
 
 [direct@ip-raw]: https://raw.githubusercontent.com/xndeye/rule-merger/refs/heads/release/direct@ip.yaml
 
 [direct@ip-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/xndeye/rule-merger/release/direct@ip.yaml
 
-[direct@ip-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/direct@ip.yaml
+[direct@ip-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@release/direct@ip.yaml
 
 [microsoft@cn-raw]: https://raw.githubusercontent.com/xndeye/rule-merger/refs/heads/release/microsoft@cn.yaml
 
 [microsoft@cn-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/xndeye/rule-merger/release/microsoft@cn.yaml
 
-[microsoft@cn-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/microsoft@cn.yaml
+[microsoft@cn-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@release/microsoft@cn.yaml
 
 [apple@cn-raw]: https://raw.githubusercontent.com/xndeye/rule-merger/refs/heads/release/apple@cn.yaml
 
 [apple@cn-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/xndeye/rule-merger/release/apple@cn.yaml
 
-[apple@cn-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/apple@cn.yaml
+[apple@cn-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@release/apple@cn.yaml
 
 [steam@cn-raw]: https://raw.githubusercontent.com/xndeye/rule-merger/refs/heads/release/steam@cn.yaml
 
 [steam@cn-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/xndeye/rule-merger/release/steam@cn.yaml
 
-[steam@cn-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/steam@cn.yaml
+[steam@cn-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@release/steam@cn.yaml
 
 [ai-raw]: https://raw.githubusercontent.com/xndeye/rule-merger/refs/heads/release/ai.yaml
 
 [ai-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/xndeye/rule-merger/release/ai.yaml
 
-[ai-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/ai.yaml
+[ai-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@release/ai.yaml
 
 [proxy-raw]: https://raw.githubusercontent.com/xndeye/rule-merger/refs/heads/release/proxy.yaml
 
 [proxy-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/xndeye/rule-merger/release/proxy.yaml
 
-[proxy-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/proxy.yaml
+[proxy-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@release/proxy.yaml
 
 [proxy@ip-raw]: https://raw.githubusercontent.com/xndeye/rule-merger/refs/heads/release/proxy@ip.yaml
 
 [proxy@ip-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/xndeye/rule-merger/release/proxy@ip.yaml
 
-[proxy@ip-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/proxy@ip.yaml
+[proxy@ip-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@release/proxy@ip.yaml
 
 [lan@ip-raw]: https://raw.githubusercontent.com/xndeye/rule-merger/refs/heads/release/lan@ip.yaml
 
 [lan@ip-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/xndeye/rule-merger/release/lan@ip.yaml
 
-[lan@ip-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/lan@ip.yaml
+[lan@ip-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@release/lan@ip.yaml
 
 [fakeip-filter-raw]: https://raw.githubusercontent.com/xndeye/rule-merger/refs/heads/release/fakeip-filter.yaml
 
 [fakeip-filter-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/xndeye/rule-merger/release/fakeip-filter.yaml
 
-[fakeip-filter-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/fakeip-filter.yaml
+[fakeip-filter-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@release/fakeip-filter.yaml
