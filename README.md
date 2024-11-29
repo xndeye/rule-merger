@@ -41,19 +41,20 @@
 
 ## 规则列表
 
-| 文件                  | 介绍         |          github          |           ghproxy            |           jsdelivr            |
-|---------------------|:-----------|:------------------------:|:----------------------------:|:-----------------------------:|
-| `reject.yaml`       | 广告域名       |    [link][reject-raw]    |    [link][reject-ghproxy]    |    [link][reject-jsdelivr]    |
-| `reject@ip.yaml`    | 广告IP       |  [link][reject@ip-raw]   |  [link][reject@ip-ghproxy]   |  [link][reject@ip-jsdelivr]   |
-| `direct.yaml`       | 推荐直连域名     |    [link][direct-raw]    |    [link][direct-ghproxy]    |    [link][direct-jsdelivr]    |
-| `direct@ip.yaml`    | 推荐直连IP     |  [link][direct@ip-raw]   |  [link][direct@ip-ghproxy]   |  [link][direct@ip-jsdelivr]   |
-| `microsoft@cn.yaml` | 微软中国域名     | [link][microsoft@cn-raw] | [link][microsoft@cn-ghproxy] | [link][microsoft@cn-jsdelivr] |
-| `apple@cn.yaml`     | 苹果中国域名     |   [link][apple@cn-raw]   |   [link][apple@cn-ghproxy]   |   [link][apple@cn-jsdelivr]   |
-| `steam@cn.yaml`     | Steam 中国域名 |   [link][steam@cn-raw]   |   [link][steam@cn-ghproxy]   |   [link][steam@cn-jsdelivr]   |
-| `ai.yaml`           | AI相关域名     |      [link][ai-raw]      |      [link][ai-ghproxy]      |      [link][ai-jsdelivr]      |
-| `proxy.yaml`        | 推荐代理域名     |    [link][proxy-raw]     |    [link][proxy-ghproxy]     |    [link][proxy-jsdelivr]     |
-| `proxy@ip.yaml`     | 推荐代理IP     |   [link][proxy@ip-raw]   |   [link][proxy@ip-ghproxy]   |   [link][proxy@ip-jsdelivr]   |
-| `lan@ip.yaml`       | 局域网IP      |    [link][lan@ip-raw]    |    [link][lan@ip-ghproxy]    |    [link][lan@ip-jsdelivr]    |
+| 文件                   | 介绍         |          github           |            ghproxy            |            jsdelivr            |
+|----------------------|:-----------|:-------------------------:|:-----------------------------:|:------------------------------:|
+| `reject.yaml`        | 广告域名       |    [link][reject-raw]     |    [link][reject-ghproxy]     |    [link][reject-jsdelivr]     |
+| `reject@ip.yaml`     | 广告IP       |   [link][reject@ip-raw]   |   [link][reject@ip-ghproxy]   |   [link][reject@ip-jsdelivr]   |
+| `direct.yaml`        | 推荐直连域名     |    [link][direct-raw]     |    [link][direct-ghproxy]     |    [link][direct-jsdelivr]     |
+| `direct@ip.yaml`     | 推荐直连IP     |   [link][direct@ip-raw]   |   [link][direct@ip-ghproxy]   |   [link][direct@ip-jsdelivr]   |
+| `microsoft@cn.yaml`  | 微软中国域名     | [link][microsoft@cn-raw]  | [link][microsoft@cn-ghproxy]  | [link][microsoft@cn-jsdelivr]  |
+| `apple@cn.yaml`      | 苹果中国域名     |   [link][apple@cn-raw]    |   [link][apple@cn-ghproxy]    |   [link][apple@cn-jsdelivr]    |
+| `steam@cn.yaml`      | Steam 中国域名 |   [link][steam@cn-raw]    |   [link][steam@cn-ghproxy]    |   [link][steam@cn-jsdelivr]    |
+| `ai.yaml`            | AI相关域名     |      [link][ai-raw]       |      [link][ai-ghproxy]       |      [link][ai-jsdelivr]       |
+| `proxy.yaml`         | 推荐代理域名     |     [link][proxy-raw]     |     [link][proxy-ghproxy]     |     [link][proxy-jsdelivr]     |
+| `proxy@ip.yaml`      | 推荐代理IP     |   [link][proxy@ip-raw]    |   [link][proxy@ip-ghproxy]    |   [link][proxy@ip-jsdelivr]    |
+| `lan@ip.yaml`        | 局域网IP      |    [link][lan@ip-raw]     |    [link][lan@ip-ghproxy]     |    [link][lan@ip-jsdelivr]     |
+| `fakeip-filter.yaml` | fakeIP过滤   | [link][fakeip-filter-raw] | [link][fakeip-filter-ghproxy] | [link][fakeip-filter-jsdelivr] |
 
 ## 完整规则
 
@@ -131,3 +132,9 @@
 [lan@ip-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/xndeye/rule-merger/release/lan@ip.yaml
 
 [lan@ip-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/lan@ip.yaml
+
+[fakeip-filter-raw]: https://raw.githubusercontent.com/xndeye/rule-merger/refs/heads/release/fakeip-filter.yaml
+
+[fakeip-filter-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/xndeye/rule-merger/release/fakeip-filter.yaml
+
+[fakeip-filter-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/fakeip-filter.yaml
