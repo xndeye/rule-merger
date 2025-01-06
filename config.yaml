@@ -71,7 +71,7 @@
 
     DustinWin_microsoft_cn:
       type: http
-      url: "https://github.com/DustinWin/ruleset_geodata/releases/download/clash-ruleset/microsoft-cn.yaml"
+      url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/microsoft-cn.yaml"
       format: yaml
       behavior: domain
 
@@ -100,7 +100,7 @@
 
     DustinWin_apple_cn:
       type: http
-      url: "https://github.com/DustinWin/ruleset_geodata/releases/download/clash-ruleset/apple-cn.yaml"
+      url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/apple-cn.yaml"
       format: yaml
       behavior: domain
 
@@ -109,7 +109,7 @@
   format: yaml
   behavior: classical
   upstream:
-    skk_steam_cn:
+    blackmatrix7_steam_cn:
       type: http
       url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/SteamCN/SteamCN.yaml"
       format: yaml
@@ -128,7 +128,7 @@
 
     DustinWin_ai:
       type: http
-      url: "https://github.com/DustinWin/ruleset_geodata/releases/download/clash-ruleset/ai.yaml"
+      url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/ai.yaml"
       format: yaml
       behavior: domain
 
@@ -185,9 +185,9 @@
       format: txt
       behavior: classical
 
-    gfw:
+    DustinWin_proxy:
       type: http
-      url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt"
+      url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.yaml"
       format: yaml
       behavior: domain
 
