@@ -11,7 +11,7 @@
 
     xndeye_reject:
       type: http
-      url: "https://raw.githubusercontent.com/xndeye/adblock_list/beta/rule/clash.yaml"
+      url: "https://raw.githubusercontent.com/xndeye/adblock_list/refs/heads/release/clash.yaml"
       format: yaml
       behavior: domain
 
