@@ -185,12 +185,6 @@
       format: txt
       behavior: classical
 
-    DustinWin_proxy:
-      type: http
-      url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.yaml"
-      format: yaml
-      behavior: domain
-
 - path: output/proxy@ip.yaml
   format: yaml
   behavior: classical
