@@ -2,7 +2,8 @@ mixed-port: 7890
 redir-port: 7891
 tproxy-port: 7892
 
-ipv6: false
+mode: rule
+ipv6: true
 log-level: warning
 allow-lan: true
 unified-delay: true
@@ -19,7 +20,7 @@ geo-update-interval: 24
 geox-url:
   geoip: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
   geosite: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
-  mmdb: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb"
+  mmdb: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.metadb"
 
 keep-alive-idle: 600
 keep-alive-interval: 15
@@ -60,7 +61,6 @@ tun:
 dns:
   enable: true
   listen: 0.0.0.0:53
-  ipv6: false
   prefer-h3: true
   respect-rules: true
   enhanced-mode: fake-ip
@@ -74,7 +74,7 @@ dns:
     - https://1.12.12.12/dns-query
     - https://223.5.5.5/dns-query#h3=true
 
-url-test: &url-test {type: url-test, url: "https://www.apple.com/library/test/success.html", interval: 1000, include-all: true}
+url-test: &url-test {type: url-test, url: "https://www.apple.com/library/test/success.html", interval: 1800, include-all: true}
 p: &p {type: http, interval: 86400, health-check: {enable: true, url: "https://www.apple.com/library/test/success.html", interval: 1000}}
 
 proxy-providers:
@@ -104,6 +104,7 @@ rules:
   - RULE-SET,microsoft@cn,Microsoft 🇨🇳
   - RULE-SET,direct,Direct
   - RULE-SET,ai,AI
+  - RULE-SET,gfw,Select Proxy
   - RULE-SET,proxy,Select Proxy
 
   - RULE-SET,lan@ip,Direct
@@ -114,6 +115,7 @@ rules:
 
 rule-anchor:
   classical: &classical {type: http, interval: 43200, behavior: classical, format: yaml}
+  mrs: &mrs {type: http, interval: 43200, behavior: domain, format: mrs}
 
 rule-providers:
   fake-ip-filter: { <<: *classical, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/fakeip-filter.yaml" }
@@ -128,3 +130,4 @@ rule-providers:
   direct: { <<: *classical, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/direct.yaml" }
   direct@ip: { <<: *classical, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/direct@ip.yaml" }
   lan@ip: { <<: *classical, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/lan@ip.yaml" }
+  gfw: { <<: *mrs, url: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@refs/heads/meta/geo/geosite/gfw.mrs" }
