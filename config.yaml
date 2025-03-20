@@ -42,6 +42,12 @@
       format: txt
       behavior: classical
 
+    xndeye_direct:
+      type: file
+      path: local/direct.yaml
+      format: yaml
+      behavior: classical
+
 - path: output/direct@ip.yaml
   format: yaml
   behavior: classical
@@ -56,6 +62,12 @@
     skk_china_ip:
       type: http
       url: "https://ruleset.skk.moe/Clash/ip/china_ip.txt"
+      format: txt
+      behavior: ipcidr
+
+    skk_china_ip_ipv6:
+      type: http
+      url: "https://ruleset.skk.moe/Clash/ip/china_ip_ipv6.txt"
       format: txt
       behavior: ipcidr
 

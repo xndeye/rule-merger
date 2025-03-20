@@ -10,9 +10,8 @@ unified-delay: true
 tcp-concurrent: true
 
 external-ui: ui
-external-ui-name: metacubexd
 external-controller: 0.0.0.0:9090
-external-ui-url: https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip
+external-ui-url: https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip
 
 geodata-mode: false
 geo-auto-update: false
