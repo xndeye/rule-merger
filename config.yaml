@@ -197,6 +197,12 @@
       format: txt
       behavior: classical
 
+    xndeye_proxy:
+      type: file
+      path: local/proxy.yaml
+      format: yaml
+      behavior: classical
+
 - path: output/proxy@ip.yaml
   format: yaml
   behavior: classical
