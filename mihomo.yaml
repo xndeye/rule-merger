@@ -73,8 +73,8 @@ dns:
     - https://1.12.12.12/dns-query
     - https://223.5.5.5/dns-query#h3=true
 
-url-test: &url-test {type: url-test, url: "https://www.apple.com/library/test/success.html", interval: 1800, include-all: true}
-p: &p {type: http, interval: 86400, health-check: {enable: true, url: "https://www.apple.com/library/test/success.html", interval: 1000}}
+url-test: &url-test {type: url-test, url: "https://captive.apple.com", interval: 1800, include-all: true}
+p: &p {type: http, interval: 86400, health-check: {enable: true, url: "https://captive.apple.com", interval: 1000}}
 
 proxy-providers:
   airport:
