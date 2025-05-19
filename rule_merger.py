@@ -66,13 +66,13 @@ class RulesMerger:
                 data = yaml.safe_load(response.text)
                 # 处理可能的 payload 嵌套
                 if isinstance(data, dict) and 'payload' in data:
-                    return data['payload']
-                return data
+                    return data['payload'] or []
+                return data or []
             return response.text.splitlines()
         except Exception as e:
             self.logger.error(f"获取规则失败 {url}: {str(e)}", exc_info=True)
             return []
-
+    
     def _transform(self, rule: str, source_behavior: str, target_behavior: str) -> Optional[str]:
         """转换规则格式"""
         if not rule:
@@ -147,8 +147,8 @@ class RulesMerger:
                     data = yaml.safe_load(f)
                     # 处理可能的 payload 嵌套
                     if isinstance(data, dict) and 'payload' in data:
-                        return data['payload']
-                    return data
+                        return data['payload'] or []
+                    return data or []
                 return f.read().splitlines()
         except Exception as e:
             print(f"读取本地规则失败 {path}: {str(e)}")
@@ -181,6 +181,8 @@ class RulesMerger:
         converted_rules = []
         source_behavior = source.get('behavior', 'classical')
         for rule in rules:
+            if rule is None:
+                continue
             cleaned_rule = self._clean_rule(rule)
             # logging.info(f"清理后的规则: {cleaned_rule}")
             transformed_rule = self._transform(cleaned_rule, source_behavior, target_behavior)
