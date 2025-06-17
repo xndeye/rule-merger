@@ -3,12 +3,7 @@
   format: yaml
   behavior: classical
   upstream:
-    skk_reject:
-      type: http
-      url: "https://ruleset.skk.moe/Clash/non_ip/reject.txt"
-      format: txt
-      behavior: classical
-
+  
     xndeye_reject:
       type: http
       url: "https://raw.githubusercontent.com/xndeye/adblock_list/refs/heads/release/clash.yaml"
