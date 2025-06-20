@@ -59,7 +59,13 @@
 ## 完整规则
 
 自用轻量级 Mihomo 配置 [mihomo.yaml](https://github.com/xndeye/rule-merger/blob/master/mihomo.yaml)  
-(已基于规则集分流，流量紧张请将 `Fallback` 设置为直连，否则推荐跟随 `Select Proxy`)
+
+> [!TIP]
+> 1. 基于本仓库规则集编写，包含了分流和去广告，简单易用
+> 2. `Fallback` 表示规则集未命中，通常保持 Direct，遇到特定网站无法打开或流量宽裕则可选择跟随 `Select Proxy`
+> 3. 非直连域不在本地进行 DNS 解析，故不存在所谓 DNS 泄露
+> 4. 请用现有（机场）订阅链接 替换配置中 `此处填写你的订阅地址`，而后将配置导入客户端即可使用
+> 5. 如客户端存在配置覆写、功能覆盖等，请自行调整或关闭相应功能
 
 ## 引用来源
 
