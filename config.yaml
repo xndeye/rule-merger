@@ -238,6 +238,17 @@
       format: txt
       behavior: classical
 
+- path: output/lan.yaml
+  format: yaml
+  behavior: classical
+  upstream:
+
+    skk_lan:
+      type: http
+      url: "https://ruleset.skk.moe/Clash/non_ip/lan.txt"
+      format: txt
+      behavior: classical
+
 - path: output/fakeip-filter.yaml
   format: yaml
   behavior: classical
