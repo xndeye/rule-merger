@@ -62,7 +62,7 @@ dns:
   listen: 0.0.0.0:53
   prefer-h3: true
   enhanced-mode: fake-ip
-  fake-ip-range: 28.0.0.1/8
+  fake-ip-range: 198.18.0.0/15
   fake-ip-filter:
     - rule-set:fake-ip-filter
   default-nameserver:
@@ -100,6 +100,7 @@ proxy-groups:
 
 rules:
   - RULE-SET,reject,REJECT
+  - RULE-SET,lan,Direct
   - RULE-SET,steam@cn,Steam 🇨🇳
   - RULE-SET,apple@cn,Apple 🇨🇳
   - RULE-SET,microsoft@cn,Microsoft 🇨🇳
@@ -131,4 +132,5 @@ rule-providers:
   direct: { <<: *classical, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/direct.yaml" }
   direct@ip: { <<: *classical, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/direct@ip.yaml" }
   lan@ip: { <<: *classical, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/lan@ip.yaml" }
+  lan: { <<: *classical, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/lan.yaml" }
   gfw: { <<: *mrs, url: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@refs/heads/meta/geo/geosite/gfw.mrs" }

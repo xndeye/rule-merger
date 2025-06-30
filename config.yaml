@@ -81,6 +81,11 @@
       url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/microsoft-cn.list"
       format: txt
       behavior: domain
+    local_microsoft_cn:
+      type: file
+      path: local/microsoft@cn.yaml
+      format: yaml
+      behavior: classical
 
 - path: output/apple@cn.yaml
   format: yaml
