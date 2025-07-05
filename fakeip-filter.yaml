@@ -1,0 +1,29 @@
+# 更新时间: 2025-07-05 12:49:36
+# 规则数量: 26
+payload:
+  - DOMAIN,injections.adguard.org
+  - DOMAIN,local.adguard.org
+  - DOMAIN-SUFFIX,10.in-addr.arpa
+  - DOMAIN-SUFFIX,16.172.in-addr.arpa
+  - DOMAIN-SUFFIX,168.192.in-addr.arpa
+  - DOMAIN-SUFFIX,17.172.in-addr.arpa
+  - DOMAIN-SUFFIX,18.172.in-addr.arpa
+  - DOMAIN-SUFFIX,19.172.in-addr.arpa
+  - DOMAIN-SUFFIX,20.172.in-addr.arpa
+  - DOMAIN-SUFFIX,21.172.in-addr.arpa
+  - DOMAIN-SUFFIX,22.172.in-addr.arpa
+  - DOMAIN-SUFFIX,23.172.in-addr.arpa
+  - DOMAIN-SUFFIX,24.172.in-addr.arpa
+  - DOMAIN-SUFFIX,25.172.in-addr.arpa
+  - DOMAIN-SUFFIX,254.169.in-addr.arpa
+  - DOMAIN-SUFFIX,26.172.in-addr.arpa
+  - DOMAIN-SUFFIX,27.172.in-addr.arpa
+  - DOMAIN-SUFFIX,28.172.in-addr.arpa
+  - DOMAIN-SUFFIX,29.172.in-addr.arpa
+  - DOMAIN-SUFFIX,30.172.in-addr.arpa
+  - DOMAIN-SUFFIX,31.172.in-addr.arpa
+  - DOMAIN-SUFFIX,bogon
+  - DOMAIN-SUFFIX,home.arpa
+  - DOMAIN-SUFFIX,lan
+  - DOMAIN-SUFFIX,localdomain
+  - DOMAIN-SUFFIX,m2m
