@@ -71,8 +71,9 @@
 
 - [Sukka Ruleset](https://ruleset.skk.moe)
 - [Loyalsoldier/clash-rules](https://github.com/Loyalsoldier/clash-rules)
-- [DustinWin/ruleset_geodata](https://github.com/DustinWin/ruleset_geodata)
+- [DustinWin/domain-list-custom](https://github.com/DustinWin/domain-list-custom)
 - [xndeye/adblock_list](https://github.com/xndeye/adblock_list)
+- [ACL4SSR/ACL4SSR](https://github.com/ACL4SSR/ACL4SSR)
 
 [reject-raw]: https://raw.githubusercontent.com/xndeye/rule-merger/refs/heads/release/reject.yaml
 

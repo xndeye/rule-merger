@@ -209,6 +209,12 @@
       format: yaml
       behavior: classical
 
+    DustinWin_proxy:
+      type: http
+      url: "https://github.com/DustinWin/domain-list-custom/releases/download/domains/proxy.list"
+      format: txt
+      behavior: classical
+
 - path: output/proxy@ip.yaml
   format: yaml
   behavior: classical
