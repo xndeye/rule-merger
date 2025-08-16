@@ -78,9 +78,9 @@
 
     DustinWin_microsoft_cn:
       type: http
-      url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/microsoft-cn.list"
+      url: "https://github.com/DustinWin/domain-list-custom/releases/download/domains/microsoft-cn.list"
       format: txt
-      behavior: domain
+      behavior: classical
     local_microsoft_cn:
       type: file
       path: local/microsoft@cn.yaml
@@ -112,9 +112,9 @@
 
     DustinWin_apple_cn:
       type: http
-      url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/apple-cn.list"
+      url: "https://github.com/DustinWin/domain-list-custom/releases/download/domains/apple-cn.list"
       format: txt
-      behavior: domain
+      behavior: classical
 
 
 - path: output/steam@cn.yaml
@@ -140,9 +140,15 @@
 
     DustinWin_ai:
       type: http
-      url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/ai.list"
+      url: "https://github.com/DustinWin/domain-list-custom/releases/download/domains/ai.list"
       format: txt
-      behavior: domain
+      behavior: classical
+
+    ACL4SSR_ai:
+      type: http
+      url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/AI.list"
+      format: txt
+      behavior: classical
 
     local_ai:
       type: file
