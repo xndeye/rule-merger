@@ -243,10 +243,10 @@
   behavior: classical
   upstream:
 
-    skk_lan:
-      type: http
-      url: "https://ruleset.skk.moe/Clash/ip/lan.txt"
-      format: txt
+    local_lan:
+      type: file
+      path: local/lan@ip.yaml
+      format: yaml
       behavior: classical
 
 - path: output/lan.yaml
