@@ -75,8 +75,8 @@ dns:
     - https://doh.pub/dns-query
     - tls://dot.pub
 
-url-test: &url-test {type: url-test, url: "https://captive.apple.com", interval: 1800, include-all: true}
-p: &p {type: http, interval: 86400, health-check: {enable: true, url: "https://captive.apple.com", interval: 1000}}
+url-test: &url-test {type: url-test, url: "http://www.msftncsi.com/ncsi.txt", interval: 1800, include-all: true}
+p: &p {type: http, interval: 86400, health-check: {enable: true, url: "http://www.msftncsi.com/ncsi.txt", interval: 1000}}
 
 proxy-providers:
   airport:
