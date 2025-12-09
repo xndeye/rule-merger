@@ -1,6 +1,6 @@
 mixed-port: 7890
-redir-port: 7891
-tproxy-port: 7892
+# redir-port: 7891
+# tproxy-port: 7892
 
 mode: rule
 ipv6: true
@@ -8,10 +8,14 @@ log-level: warning
 allow-lan: true
 unified-delay: true
 tcp-concurrent: true
+find-process-mode: strict
 
+# web dashboard
+# http://{external-controller}/ui  password: {secret}
 external-ui: ui
 external-controller: 0.0.0.0:9090
-external-ui-url: https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip
+external-ui-url: "https://fastly.jsdelivr.net/gh/Zephyruso/zashboard@releases/latest/download/dist.zip"
+secret: "mihomo"
 
 geodata-mode: false
 geo-auto-update: false
@@ -29,7 +33,7 @@ profile:
   store-fake-ip: true
 
 sniffer:
-  enable: true
+  enable: false
   force-dns-mapping: true
   parse-pure-ip: true
   override-destination: true
@@ -50,7 +54,6 @@ tun:
   device: mihomo
   dns-hijack:
     - "any:53"
-    - "tcp://any:53"
   strict-route: true
   auto-route: true
   auto-redirect: true
@@ -65,6 +68,7 @@ dns:
   fake-ip-range: 198.18.0.0/15
   fake-ip-filter:
     - rule-set:fake-ip-filter
+    - rule-set:lan
   default-nameserver:
     - tls://223.5.5.5:853
     - quic://223.6.6.6:853
@@ -75,8 +79,8 @@ dns:
     - https://doh.pub/dns-query
     - tls://dot.pub
 
-url-test: &url-test {type: url-test, url: "http://www.msftncsi.com/ncsi.txt", interval: 1800, include-all: true}
-p: &p {type: http, interval: 86400, health-check: {enable: true, url: "http://www.msftncsi.com/ncsi.txt", interval: 1000}}
+url-test: &url-test {type: url-test, url: "https://cp.cloudflare.com/generate_204", interval: 1800, include-all: true}
+p: &p {type: http, interval: 86400, health-check: {enable: true, url: "https://cp.cloudflare.com/generate_204", interval: 1000}}
 
 proxy-providers:
   airport:
@@ -110,7 +114,7 @@ rules:
   - RULE-SET,proxy,Select Proxy
 
   - RULE-SET,lan@ip,Direct
-  - RULE-SET,reject@ip,Direct
+  - RULE-SET,reject@ip,REJECT
   - RULE-SET,direct@ip,Direct
   - RULE-SET,proxy@ip,Select Proxy
   - MATCH,Fallback
