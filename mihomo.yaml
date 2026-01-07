@@ -17,8 +17,8 @@ external-controller: 0.0.0.0:9090
 external-ui-url: "https://ghfast.top/https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip"
 secret: "mihomo"
 
-geodata-mode: false
-geo-auto-update: false
+geodata-mode: true
+geo-auto-update: true
 geo-update-interval: 24
 geox-url:
   geoip: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
@@ -113,7 +113,8 @@ rules:
   - RULE-SET,ai,AI
   - RULE-SET,gfw,Select Proxy
   - RULE-SET,proxy,Select Proxy
-
+  - GEOSITE,cn,Direct
+  - GEOIP,CN,Direct
   - RULE-SET,lan@ip,Direct
   - RULE-SET,reject@ip,REJECT
   - RULE-SET,direct@ip,Direct
