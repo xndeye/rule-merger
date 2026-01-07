@@ -14,7 +14,7 @@ find-process-mode: strict
 # http://{external-controller}/ui  password: {secret}
 external-ui: ui
 external-controller: 0.0.0.0:9090
-external-ui-url: "https://fastly.jsdelivr.net/gh/Zephyruso/zashboard@releases/latest/download/dist.zip"
+external-ui-url: "https://ghfast.top/https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip"
 secret: "mihomo"
 
 geodata-mode: false
