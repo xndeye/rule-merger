@@ -62,6 +62,7 @@ tun:
 
 dns:
   enable: true
+  # for Android systems, please comment out.
   listen: 0.0.0.0:53
   prefer-h3: true
   enhanced-mode: fake-ip
@@ -111,7 +112,6 @@ rules:
   - RULE-SET,microsoft@cn,Microsoft 🇨🇳
   - RULE-SET,direct,Direct
   - RULE-SET,ai,AI
-  - RULE-SET,gfw,Select Proxy
   - RULE-SET,proxy,Select Proxy
   - GEOSITE,cn,Direct
   - GEOIP,CN,Direct
@@ -123,20 +123,20 @@ rules:
 
 rule-anchor:
   classical: &classical {type: http, interval: 43200, behavior: classical, format: yaml}
-  mrs: &mrs {type: http, interval: 43200, behavior: domain, format: mrs}
+  ipcidr: &ipcidr {type: http, interval: 43200, behavior: ipcidr, format: mrs}
+  domain: &domain {type: http, interval: 43200, behavior: domain, format: mrs}
 
 rule-providers:
-  fake-ip-filter: { <<: *classical, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/fakeip-filter.yaml" }
-  reject: { <<: *classical, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/reject.yaml" }
-  reject@ip: { <<: *classical, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/reject@ip.yaml" }
-  steam@cn: { <<: *classical, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/steam@cn.yaml" }
-  microsoft@cn: { <<: *classical, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/microsoft@cn.yaml" }
-  apple@cn: { <<: *classical, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/apple@cn.yaml" }
-  ai: { <<: *classical, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/ai.yaml" }
-  proxy: { <<: *classical, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/proxy.yaml" }
-  proxy@ip: { <<: *classical, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/proxy@ip.yaml" }
-  direct: { <<: *classical, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/direct.yaml" }
-  direct@ip: { <<: *classical, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/direct@ip.yaml" }
-  lan@ip: { <<: *classical, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/lan@ip.yaml" }
-  lan: { <<: *classical, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/lan.yaml" }
-  gfw: { <<: *mrs, url: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@refs/heads/meta/geo/geosite/gfw.mrs" }
+  fake-ip-filter: { <<: *domain, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/fakeip-filter.mrs" }
+  reject: { <<: *domain, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/reject.mrs" }
+  reject@ip: { <<: *ipcidr, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/reject@ip.mrs" }
+  steam@cn: { <<: *domain, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/steam@cn.mrs" }
+  microsoft@cn: { <<: *domain, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/microsoft@cn.mrs" }
+  apple@cn: { <<: *domain, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/apple@cn.mrs" }
+  ai: { <<: *domain, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/ai.mrs" }
+  proxy: { <<: *domain, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/proxy.mrs" }
+  proxy@ip: { <<: *ipcidr, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/proxy@ip.mrs" }
+  direct: { <<: *domain, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/direct.mrs" }
+  direct@ip: { <<: *ipcidr, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/direct@ip.mrs" }
+  lan@ip: { <<: *ipcidr, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/lan@ip.mrs" }
+  lan: { <<: *domain, url: "https://fastly.jsdelivr.net/gh/xndeye/rule-merger@refs/heads/release/lan.mrs" }

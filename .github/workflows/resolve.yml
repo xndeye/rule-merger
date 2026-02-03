@@ -22,6 +22,15 @@ jobs:
         run: |
           pip install -r requirements.txt
 
+      - name: Set up Mihomo latest
+        run: |
+          LATEST_TAG=$(curl -s https://api.github.com/repos/MetaCubeX/mihomo/releases/latest | grep tag_name | cut -d '"' -f 4)
+          curl -L -o mihomo.gz https://github.com/MetaCubeX/mihomo/releases/download/${LATEST_TAG}/mihomo-linux-amd64-${LATEST_TAG}.gz
+          gunzip mihomo.gz
+          sudo mv mihomo /usr/local/bin/
+          sudo chmod +x /usr/local/bin/mihomo
+          mihomo -v
+
       - name: Run script
         run: python rule_merger.py
 
