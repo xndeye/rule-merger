@@ -214,6 +214,12 @@
       format: mrs
       behavior: domain
 
+    google_cn:
+      type: http
+      url: "https://github.com/DustinWin/domain-list-custom/releases/download/domains/google-cn.list"
+      format: txt
+      behavior: classical
+
 - path: output/proxy@ip.mrs
   format: mrs
   behavior: ipcidr
@@ -488,6 +494,12 @@
       behavior: classical
 
     gfw:
+      type: http
+      url: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@refs/heads/meta/geo/geosite/gfw.mrs"
+      format: mrs
+      behavior: domain
+
+    google_cn:
       type: http
       url: "https://github.com/DustinWin/domain-list-custom/releases/download/domains/google-cn.list"
       format: txt
