@@ -265,7 +265,7 @@
       format: text
       behavior: classical
 
-- path: output/fakeip-filter.mrs
+- path: output/fakeip-filter.yaml
   format: mrs
   behavior: domain
   upstream:
@@ -275,8 +275,6 @@
       url: "https://ruleset.skk.moe/Clash/domainset/clash_fake_ip_filter.txt"
       format: text
       behavior: domain
-
-##### 以下为部分将在未来移除
 
 
 - path: output/reject.yaml
@@ -298,7 +296,7 @@
     skk_reject_ip:
       type: http
       url: "https://ruleset.skk.moe/Clash/ip/reject.txt"
-      format: txt
+      format: text
       behavior: classical
 
 - path: output/direct.yaml
@@ -308,13 +306,13 @@
     skk_domestic:
       type: http
       url: "https://ruleset.skk.moe/Clash/non_ip/domestic.txt"
-      format: txt
+      format: text
       behavior: classical
 
     skk_direct_ip:
       type: http
       url: "https://ruleset.skk.moe/Clash/non_ip/direct.txt"
-      format: txt
+      format: text
       behavior: classical
 
     xndeye_direct:
@@ -331,19 +329,19 @@
     skk_domestic_ip:
       type: http
       url: "https://ruleset.skk.moe/Clash/ip/domestic.txt"
-      format: txt
+      format: text
       behavior: classical
 
     skk_china_ip:
       type: http
       url: "https://ruleset.skk.moe/Clash/ip/china_ip.txt"
-      format: txt
+      format: text
       behavior: ipcidr
 
     skk_china_ip_ipv6:
       type: http
       url: "https://ruleset.skk.moe/Clash/ip/china_ip_ipv6.txt"
-      format: txt
+      format: text
       behavior: ipcidr
 
 - path: output/microsoft@cn.yaml
@@ -353,13 +351,13 @@
     skk_microsoft_cdn:
       type: http
       url: "https://ruleset.skk.moe/Clash/non_ip/microsoft_cdn.txt"
-      format: txt
+      format: text
       behavior: classical
 
     DustinWin_microsoft_cn:
       type: http
       url: "https://github.com/DustinWin/domain-list-custom/releases/download/domains/microsoft-cn.list"
-      format: txt
+      format: text
       behavior: classical
     local_microsoft_cn:
       type: file
@@ -375,25 +373,25 @@
     skk_apple_services:
       type: http
       url: "https://ruleset.skk.moe/Clash/non_ip/apple_services.txt"
-      format: txt
+      format: text
       behavior: classical
 
     skk_apple_cn:
       type: http
       url: "https://ruleset.skk.moe/Clash/non_ip/apple_cn.txt"
-      format: txt
+      format: text
       behavior: classical
 
     skk_apple_cdn:
       type: http
       url: "https://ruleset.skk.moe/Clash/domainset/apple_cdn.txt"
-      format: txt
+      format: text
       behavior: domain
 
     DustinWin_apple_cn:
       type: http
       url: "https://github.com/DustinWin/domain-list-custom/releases/download/domains/apple-cn.list"
-      format: txt
+      format: text
       behavior: classical
 
 
@@ -415,19 +413,19 @@
     skk_ai:
       type: http
       url: "https://ruleset.skk.moe/Clash/non_ip/ai.txt"
-      format: txt
+      format: text
       behavior: classical
 
     DustinWin_ai:
       type: http
       url: "https://github.com/DustinWin/domain-list-custom/releases/download/domains/ai.list"
-      format: txt
+      format: text
       behavior: classical
 
     ACL4SSR_ai:
       type: http
       url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/AI.list"
-      format: txt
+      format: text
       behavior: classical
 
     local_ai:
@@ -444,49 +442,55 @@
     skk_cdn_domainset:
       type: http
       url: "https://ruleset.skk.moe/Clash/domainset/cdn.txt"
-      format: txt
+      format: text
       behavior: domain
 
     skk_cdn:
       type: http
       url: "https://ruleset.skk.moe/Clash/non_ip/cdn.txt"
-      format: txt
+      format: text
       behavior: classical
 
     skk_stream:
       type: http
       url: "https://ruleset.skk.moe/Clash/non_ip/stream.txt"
-      format: txt
+      format: text
       behavior: classical
 
     telegram:
       type: http
       url: "https://ruleset.skk.moe/Clash/non_ip/telegram.txt"
-      format: txt
+      format: text
       behavior: classical
 
     skk_download_domainset:
       type: http
       url: "https://ruleset.skk.moe/Clash/domainset/download.txt"
-      format: txt
+      format: text
       behavior: domain
 
     skk_download:
       type: http
       url: "https://ruleset.skk.moe/Clash/non_ip/download.txt"
-      format: txt
+      format: text
       behavior: classical
 
     skk_global:
       type: http
       url: "https://ruleset.skk.moe/Clash/non_ip/global.txt"
-      format: txt
+      format: text
       behavior: classical
 
     xndeye_proxy:
       type: file
       path: local/proxy.yaml
       format: yaml
+      behavior: classical
+
+    gfw:
+      type: http
+      url: "https://github.com/DustinWin/domain-list-custom/releases/download/domains/google-cn.list"
+      format: txt
       behavior: classical
 
 - path: output/proxy@ip.yaml
@@ -497,25 +501,25 @@
     skk_domestic_ip:
       type: http
       url: "https://ruleset.skk.moe/Clash/ip/domestic.txt"
-      format: txt
+      format: text
       behavior: classical
 
     skk_stream_ip:
       type: http
       url: "https://ruleset.skk.moe/Clash/ip/stream.txt"
-      format: txt
+      format: text
       behavior: classical
 
     telegram_ip:
       type: http
       url: "https://ruleset.skk.moe/Clash/ip/telegram.txt"
-      format: txt
+      format: text
       behavior: classical
 
     skk_cdn_ip:
       type: http
       url: "https://ruleset.skk.moe/Clash/ip/cdn.txt"
-      format: txt
+      format: text
       behavior: classical
 
 - path: output/lan@ip.yaml
@@ -537,16 +541,16 @@
     skk_lan:
       type: http
       url: "https://ruleset.skk.moe/Clash/non_ip/lan.txt"
-      format: txt
+      format: text
       behavior: classical
 
 - path: output/fakeip-filter.yaml
   format: yaml
-  behavior: classical
+  behavior: domain
   upstream:
 
     skk_fake_ip_filter:
       type: http
       url: "https://ruleset.skk.moe/Clash/domainset/clash_fake_ip_filter.txt"
-      format: txt
+      format: text
       behavior: domain
