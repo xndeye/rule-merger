@@ -271,7 +271,7 @@
       format: text
       behavior: classical
 
-- path: output/fakeip-filter.yaml
+- path: output/fakeip-filter.mrs
   format: mrs
   behavior: domain
   upstream:
