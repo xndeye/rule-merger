@@ -120,27 +120,31 @@ class RulesMerger:
 
     def _classical_to_ipcidr(self, rule: str) -> Optional[str]:
         """将经典规则转换为IP-CIDR规则"""
-        if not (rule.startswith('IP-CIDR,') or rule.startswith('IP-CIDR6,')):
-            return None
         parts = rule.split(',')
         if len(parts) < 2:
             return None
-        return parts[1].strip()
+        
+        suffix = parts[0].strip()
+        ipcidr = parts[1].strip()
+        if not (suffix == 'IP-CIDR' or suffix == 'IP-CIDR6'):
+            return None
+        return ipcidr
     
     def _classical_to_domain(self, rule: str) -> Optional[str]:
         """将经典规则转换为DOMAIN规则"""
         parts = rule.split(',')
         if len(parts) < 2:
             return None
-            
+        
+        suffix = parts[0].strip()
         domain = parts[1].strip()
         # 验证域名格式
         if not DOMAIN_PATTERN.match(domain):
             return None
             
-        if rule.startswith('DOMAIN,'):
+        if suffix == 'DOMAIN':
             return domain
-        elif rule.startswith('DOMAIN-SUFFIX,'):
+        elif suffix == 'DOMAIN-SUFFIX':
             return '+.' + domain
         return None
     
@@ -302,9 +306,8 @@ class RulesMerger:
                 
             rule_type = parts[0]
             value = parts[1].strip()
-            
-            # if rule_type not in RULE_TYPES['classical']:
-            #     return None
+
+            rule = ','.join(part.strip() for part in parts)
                 
             if rule_type in {'DOMAIN', 'DOMAIN-SUFFIX'}:
                 return rule if DOMAIN_PATTERN.match(value) else None
@@ -312,10 +315,10 @@ class RulesMerger:
                 return rule if IPV4_CIDR_PATTERN.match(value) else None
             elif rule_type == 'IP-CIDR6':
                 return rule if IPV6_CIDR_PATTERN.match(value) else None
+            return rule
         except Exception as e:
             self.logger.debug(f"规则验证失败: {rule}, 错误: {str(e)}")
             return None
-        return rule
 
     def _validate_ipcidr_rule(self, rule: str) -> Optional[str]:
         """验证 IP-CIDR 规则格式"""
