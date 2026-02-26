@@ -73,6 +73,7 @@
 - [DustinWin/domain-list-custom](https://github.com/DustinWin/domain-list-custom)
 - [xndeye/adblock_list](https://github.com/xndeye/adblock_list)
 - [ACL4SSR/ACL4SSR](https://github.com/ACL4SSR/ACL4SSR)
+- [Accademia/Additional_Rule_For_Clash](https://github.com/Accademia/Additional_Rule_For_Clash)
 
 [reject-raw]: https://raw.githubusercontent.com/xndeye/rule-merger/refs/heads/release/reject.mrs
 [reject-yaml]: https://raw.githubusercontent.com/xndeye/rule-merger/refs/heads/release/reject.yaml
