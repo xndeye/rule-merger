@@ -57,10 +57,3 @@ jobs:
           skip_checkout: true
           commit_options: '--allow-empty'
 
-      - name: Delete Workflow Runs
-        uses: Mattraks/delete-workflow-runs@v2
-        with:
-          token: ${{secrets.GITHUB_TOKEN}}
-          repository: ${{ github.repository }}
-          retain_days: 1
-          keep_minimum_runs: 1
