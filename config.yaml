@@ -72,8 +72,8 @@
       behavior: classical
     geosite_cn:
       type: http
-      url: https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/refs/heads/main/GeositeCN/GeositeCN.yaml
-      format: yaml
+      url: https://github.com/DustinWin/domain-list-custom/releases/download/domains/cn-lite.list
+      format: text
       behavior: classical
 
 - path: output/direct.yaml
