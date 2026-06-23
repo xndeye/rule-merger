@@ -69,12 +69,17 @@
       type: file
       path: local/direct.yaml
       format: yaml
-      behavior: classical
+      behavicloudflareor: classical
     geosite_cn:
       type: http
       url: https://github.com/DustinWin/domain-list-custom/releases/download/domains/cn-lite.list
       format: text
       behavior: classical
+    cloudflare@cn:
+      type: http
+      url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/classical/cloudflare%40cn.list
+      format: text
+      behavior: domain
 
 - path: output/direct.yaml
   format: yaml
