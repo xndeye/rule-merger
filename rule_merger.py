@@ -20,6 +20,13 @@ DOMAIN_PATTERN = re.compile(r'^[a-zA-Z0-9]([a-zA-Z0-9-]*[a-zA-Z0-9])?(\.[a-zA-Z0
 MIHOMO_PATH = 'mihomo'
 SING_BOX_PATH = 'sing-box'
 SING_BOX_RULESET_VERSION = 4
+SING_BOX_LIST_FIELDS = (
+    'domain',
+    'domain_suffix',
+    'domain_keyword',
+    'domain_regex',
+    'ip_cidr'
+)
 
 
 class RulesMerger:
@@ -394,23 +401,21 @@ class RulesMerger:
 
     def _to_sing_box_rules(self, rules: List[str], behavior: str) -> List[Dict[str, Any]]:
         """将当前规则转换为 sing-box headless rule。"""
+        sing_box_rule = self._new_sing_box_rule_bucket()
+
         if behavior == 'sing-box':
-            sing_box_rules = []
+            passthrough_rules = []
             for rule in rules:
                 parsed_rule = self._parse_sing_box_rule(rule)
                 if parsed_rule is None:
                     self.logger.debug(f"跳过无法解析的 sing-box 规则: {rule}")
                     continue
-                sing_box_rules.append(parsed_rule)
-            return sing_box_rules
+                if self._can_compact_sing_box_rule(parsed_rule):
+                    self._add_sing_box_rule_items(sing_box_rule, parsed_rule)
+                else:
+                    passthrough_rules.append(parsed_rule)
 
-        sing_box_rule = {
-            'domain': [],
-            'domain_suffix': [],
-            'domain_keyword': [],
-            'domain_regex': [],
-            'ip_cidr': []
-        }
+            return self._compact_sing_box_rules(sing_box_rule) + passthrough_rules
 
         for rule in rules:
             converted = self._to_sing_box_item(rule, behavior)
@@ -420,12 +425,36 @@ class RulesMerger:
             key, value = converted
             sing_box_rule[key].append(value)
 
-        compact_rule = {
-            key: sorted(set(values))
-            for key, values in sing_box_rule.items()
+        return self._compact_sing_box_rules(sing_box_rule)
+
+    def _new_sing_box_rule_bucket(self) -> Dict[str, List[str]]:
+        return {key: [] for key in SING_BOX_LIST_FIELDS}
+
+    def _can_compact_sing_box_rule(self, rule: Dict[str, Any]) -> bool:
+        if rule.get('type') == 'logical':
+            return False
+
+        if len(rule) != 1:
+            return False
+
+        key, value = next(iter(rule.items()))
+        values = self._as_list(value)
+        return (
+            key in SING_BOX_LIST_FIELDS and
+            bool(values) and
+            all(isinstance(item, str) for item in values)
+        )
+
+    def _add_sing_box_rule_items(self, bucket: Dict[str, List[str]], rule: Dict[str, Any]) -> None:
+        for key in SING_BOX_LIST_FIELDS:
+            bucket[key].extend(self._as_list(rule.get(key)))
+
+    def _compact_sing_box_rules(self, bucket: Dict[str, List[str]]) -> List[Dict[str, List[str]]]:
+        return [
+            {key: sorted(set(values))}
+            for key, values in bucket.items()
             if values
-        }
-        return [compact_rule] if compact_rule else []
+        ]
 
     def _to_sing_box_item(self, rule: str, behavior: str) -> Optional[tuple[str, str]]:
         if behavior == 'domain':
