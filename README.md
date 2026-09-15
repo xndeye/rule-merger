@@ -58,21 +58,21 @@
 
 ## 规则列表
 
-| 文件                   | 介绍         |          github           |            ghproxy            |            jsdelivr            |
-|----------------------|:-----------|:-------------------------:|:-----------------------------:|:------------------------------:|
-| `reject`        | 广告域名       | [mrs][reject-raw] [yaml][reject-yaml] [json][reject-json] [srs][reject-srs] | [mrs][reject-raw-ghproxy] [yaml][reject-yaml-ghproxy] [json][reject-json-ghproxy] [srs][reject-srs-ghproxy] | [mrs][reject-raw-jsdelivr] [yaml][reject-yaml-jsdelivr] [json][reject-json-jsdelivr] [srs][reject-srs-jsdelivr] |
-| `reject@ip`     | 广告IP       | [mrs][reject@ip-raw] [yaml][reject@ip-yaml] [json][reject@ip-json] [srs][reject@ip-srs] | [mrs][reject@ip-raw-ghproxy] [yaml][reject@ip-yaml-ghproxy] [json][reject@ip-json-ghproxy] [srs][reject@ip-srs-ghproxy] | [mrs][reject@ip-raw-jsdelivr] [yaml][reject@ip-yaml-jsdelivr] [json][reject@ip-json-jsdelivr] [srs][reject@ip-srs-jsdelivr] |
+| 文件            | 介绍             |          github           |            ghproxy            |            jsdelivr            |
+|-----------------|:-----------------|:-------------------------:|:-----------------------------:|:------------------------------:|
+| `reject`        | 广告域名         | [mrs][reject-raw] [yaml][reject-yaml] [json][reject-json] [srs][reject-srs] | [mrs][reject-raw-ghproxy] [yaml][reject-yaml-ghproxy] [json][reject-json-ghproxy] [srs][reject-srs-ghproxy] | [mrs][reject-raw-jsdelivr] [yaml][reject-yaml-jsdelivr] [json][reject-json-jsdelivr] [srs][reject-srs-jsdelivr] |
+| `reject@ip`     | 广告IP           | [mrs][reject@ip-raw] [yaml][reject@ip-yaml] [json][reject@ip-json] [srs][reject@ip-srs] | [mrs][reject@ip-raw-ghproxy] [yaml][reject@ip-yaml-ghproxy] [json][reject@ip-json-ghproxy] [srs][reject@ip-srs-ghproxy] | [mrs][reject@ip-raw-jsdelivr] [yaml][reject@ip-yaml-jsdelivr] [json][reject@ip-json-jsdelivr] [srs][reject@ip-srs-jsdelivr] |
 | `direct`        | 推荐直连域名     | [mrs][direct-raw] [yaml][direct-yaml] [json][direct-json] [srs][direct-srs] | [mrs][direct-raw-ghproxy] [yaml][direct-yaml-ghproxy] [json][direct-json-ghproxy] [srs][direct-srs-ghproxy] | [mrs][direct-raw-jsdelivr] [yaml][direct-yaml-jsdelivr] [json][direct-json-jsdelivr] [srs][direct-srs-jsdelivr] |
-| `direct@ip`     | 推荐直连IP     | [mrs][direct@ip-raw] [yaml][direct@ip-yaml] [json][direct@ip-json] [srs][direct@ip-srs] | [mrs][direct@ip-raw-ghproxy] [yaml][direct@ip-yaml-ghproxy] [json][direct@ip-json-ghproxy] [srs][direct@ip-srs-ghproxy] | [mrs][direct@ip-raw-jsdelivr] [yaml][direct@ip-yaml-jsdelivr] [json][direct@ip-json-jsdelivr] [srs][direct@ip-srs-jsdelivr] |
+| `direct@ip`     | 推荐直连IP       | [mrs][direct@ip-raw] [yaml][direct@ip-yaml] [json][direct@ip-json] [srs][direct@ip-srs] | [mrs][direct@ip-raw-ghproxy] [yaml][direct@ip-yaml-ghproxy] [json][direct@ip-json-ghproxy] [srs][direct@ip-srs-ghproxy] | [mrs][direct@ip-raw-jsdelivr] [yaml][direct@ip-yaml-jsdelivr] [json][direct@ip-json-jsdelivr] [srs][direct@ip-srs-jsdelivr] |
 | `microsoft@cn`  | 微软中国域名     | [mrs][microsoft@cn-raw] [yaml][microsoft@cn-yaml] [json][microsoft@cn-json] [srs][microsoft@cn-srs] | [mrs][microsoft@cn-raw-ghproxy] [yaml][microsoft@cn-yaml-ghproxy] [json][microsoft@cn-json-ghproxy] [srs][microsoft@cn-srs-ghproxy] | [mrs][microsoft@cn-raw-jsdelivr] [yaml][microsoft@cn-yaml-jsdelivr] [json][microsoft@cn-json-jsdelivr] [srs][microsoft@cn-srs-jsdelivr] |
 | `apple@cn`      | 苹果中国域名     | [mrs][apple@cn-raw] [yaml][apple@cn-yaml] [json][apple@cn-json] [srs][apple@cn-srs] | [mrs][apple@cn-raw-ghproxy] [yaml][apple@cn-yaml-ghproxy] [json][apple@cn-json-ghproxy] [srs][apple@cn-srs-ghproxy] | [mrs][apple@cn-raw-jsdelivr] [yaml][apple@cn-yaml-jsdelivr] [json][apple@cn-json-jsdelivr] [srs][apple@cn-srs-jsdelivr] |
-| `steam@cn`      | Steam 中国域名 | [mrs][steam@cn-raw] [yaml][steam@cn-yaml] [json][steam@cn-json] [srs][steam@cn-srs] | [mrs][steam@cn-raw-ghproxy] [yaml][steam@cn-yaml-ghproxy] [json][steam@cn-json-ghproxy] [srs][steam@cn-srs-ghproxy] | [mrs][steam@cn-raw-jsdelivr] [yaml][steam@cn-yaml-jsdelivr] [json][steam@cn-json-jsdelivr] [srs][steam@cn-srs-jsdelivr] |
-| `ai`            | AI相关域名     | [mrs][ai-raw] [yaml][ai-yaml] [json][ai-json] [srs][ai-srs] | [mrs][ai-raw-ghproxy] [yaml][ai-yaml-ghproxy] [json][ai-json-ghproxy] [srs][ai-srs-ghproxy] | [mrs][ai-raw-jsdelivr] [yaml][ai-yaml-jsdelivr] [json][ai-json-jsdelivr] [srs][ai-srs-jsdelivr] |
+| `game@cn`       | 游戏相关中国域名 | [mrs][game@cn-raw] [yaml][game@cn-yaml] [json][game@cn-json] [srs][game@cn-srs] | [mrs][game@cn-raw-ghproxy] [yaml][game@cn-yaml-ghproxy] [json][game@cn-json-ghproxy] [srs][game@cn-srs-ghproxy] | [mrs][game@cn-raw-jsdelivr] [yaml][game@cn-yaml-jsdelivr] [json][game@cn-json-jsdelivr] [srs][game@cn-srs-jsdelivr] |
+| `ai`            | AI相关域名       | [mrs][ai-raw] [yaml][ai-yaml] [json][ai-json] [srs][ai-srs] | [mrs][ai-raw-ghproxy] [yaml][ai-yaml-ghproxy] [json][ai-json-ghproxy] [srs][ai-srs-ghproxy] | [mrs][ai-raw-jsdelivr] [yaml][ai-yaml-jsdelivr] [json][ai-json-jsdelivr] [srs][ai-srs-jsdelivr] |
 | `proxy`         | 推荐代理域名     | [mrs][proxy-raw] [yaml][proxy-yaml] [json][proxy-json] [srs][proxy-srs] | [mrs][proxy-raw-ghproxy] [yaml][proxy-yaml-ghproxy] [json][proxy-json-ghproxy] [srs][proxy-srs-ghproxy] | [mrs][proxy-raw-jsdelivr] [yaml][proxy-yaml-jsdelivr] [json][proxy-json-jsdelivr] [srs][proxy-srs-jsdelivr] |
-| `proxy@ip`      | 推荐代理IP     | [mrs][proxy@ip-raw] [yaml][proxy@ip-yaml] [json][proxy@ip-json] [srs][proxy@ip-srs] | [mrs][proxy@ip-raw-ghproxy] [yaml][proxy@ip-yaml-ghproxy] [json][proxy@ip-json-ghproxy] [srs][proxy@ip-srs-ghproxy] | [mrs][proxy@ip-raw-jsdelivr] [yaml][proxy@ip-yaml-jsdelivr] [json][proxy@ip-json-jsdelivr] [srs][proxy@ip-srs-jsdelivr] |
-| `lan@ip`        | 局域网IP      | [mrs][lan@ip-raw] [yaml][lan@ip-yaml] [json][lan@ip-json] [srs][lan@ip-srs] | [mrs][lan@ip-raw-ghproxy] [yaml][lan@ip-yaml-ghproxy] [json][lan@ip-json-ghproxy] [srs][lan@ip-srs-ghproxy] | [mrs][lan@ip-raw-jsdelivr] [yaml][lan@ip-yaml-jsdelivr] [json][lan@ip-json-jsdelivr] [srs][lan@ip-srs-jsdelivr] |
-| `lan`           | 局域网域名     | [mrs][lan-raw] [yaml][lan-yaml] [json][lan-json] [srs][lan-srs] | [mrs][lan-raw-ghproxy] [yaml][lan-yaml-ghproxy] [json][lan-json-ghproxy] [srs][lan-srs-ghproxy] | [mrs][lan-raw-jsdelivr] [yaml][lan-yaml-jsdelivr] [json][lan-json-jsdelivr] [srs][lan-srs-jsdelivr] |
-| `fakeip-filter` | fakeIP过滤   | [mrs][fakeip-filter-raw] [yaml][fakeip-filter-yaml] [json][fakeip-filter-json] [srs][fakeip-filter-srs] | [mrs][fakeip-filter-raw-ghproxy] [yaml][fakeip-filter-yaml-ghproxy] [json][fakeip-filter-json-ghproxy] [srs][fakeip-filter-srs-ghproxy] | [mrs][fakeip-filter-raw-jsdelivr] [yaml][fakeip-filter-yaml-jsdelivr] [json][fakeip-filter-json-jsdelivr] [srs][fakeip-filter-srs-jsdelivr] |
+| `proxy@ip`      | 推荐代理IP       | [mrs][proxy@ip-raw] [yaml][proxy@ip-yaml] [json][proxy@ip-json] [srs][proxy@ip-srs] | [mrs][proxy@ip-raw-ghproxy] [yaml][proxy@ip-yaml-ghproxy] [json][proxy@ip-json-ghproxy] [srs][proxy@ip-srs-ghproxy] | [mrs][proxy@ip-raw-jsdelivr] [yaml][proxy@ip-yaml-jsdelivr] [json][proxy@ip-json-jsdelivr] [srs][proxy@ip-srs-jsdelivr] |
+| `lan@ip`        | 局域网IP         | [mrs][lan@ip-raw] [yaml][lan@ip-yaml] [json][lan@ip-json] [srs][lan@ip-srs] | [mrs][lan@ip-raw-ghproxy] [yaml][lan@ip-yaml-ghproxy] [json][lan@ip-json-ghproxy] [srs][lan@ip-srs-ghproxy] | [mrs][lan@ip-raw-jsdelivr] [yaml][lan@ip-yaml-jsdelivr] [json][lan@ip-json-jsdelivr] [srs][lan@ip-srs-jsdelivr] |
+| `lan`           | 局域网域名       | [mrs][lan-raw] [yaml][lan-yaml] [json][lan-json] [srs][lan-srs] | [mrs][lan-raw-ghproxy] [yaml][lan-yaml-ghproxy] [json][lan-json-ghproxy] [srs][lan-srs-ghproxy] | [mrs][lan-raw-jsdelivr] [yaml][lan-yaml-jsdelivr] [json][lan-json-jsdelivr] [srs][lan-srs-jsdelivr] |
+| `fakeip-filter` | fakeIP过滤       | [mrs][fakeip-filter-raw] [yaml][fakeip-filter-yaml] [json][fakeip-filter-json] [srs][fakeip-filter-srs] | [mrs][fakeip-filter-raw-ghproxy] [yaml][fakeip-filter-yaml-ghproxy] [json][fakeip-filter-json-ghproxy] [srs][fakeip-filter-srs-ghproxy] | [mrs][fakeip-filter-raw-jsdelivr] [yaml][fakeip-filter-yaml-jsdelivr] [json][fakeip-filter-json-jsdelivr] [srs][fakeip-filter-srs-jsdelivr] |
 
 ## 引用来源
 
@@ -80,7 +80,6 @@
 - [Loyalsoldier/clash-rules](https://github.com/Loyalsoldier/clash-rules)
 - [DustinWin/domain-list-custom](https://github.com/DustinWin/domain-list-custom)
 - [xndeye/adblock_list](https://github.com/xndeye/adblock_list)
-- [ACL4SSR/ACL4SSR](https://github.com/ACL4SSR/ACL4SSR)
 
 ---
 
@@ -177,20 +176,20 @@
 [apple@cn-json-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@release/apple@cn.json
 [apple@cn-srs-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@release/apple@cn.srs
 
-[steam@cn-raw]: https://raw.githubusercontent.com/xndeye/rule-merger/refs/heads/release/steam@cn.mrs
-[steam@cn-yaml]: https://raw.githubusercontent.com/xndeye/rule-merger/refs/heads/release/steam@cn.yaml
-[steam@cn-json]: https://raw.githubusercontent.com/xndeye/rule-merger/refs/heads/release/steam@cn.json
-[steam@cn-srs]: https://raw.githubusercontent.com/xndeye/rule-merger/refs/heads/release/steam@cn.srs
+[game@cn-raw]: https://raw.githubusercontent.com/xndeye/rule-merger/refs/heads/release/game@cn.mrs
+[game@cn-yaml]: https://raw.githubusercontent.com/xndeye/rule-merger/refs/heads/release/game@cn.yaml
+[game@cn-json]: https://raw.githubusercontent.com/xndeye/rule-merger/refs/heads/release/game@cn.json
+[game@cn-srs]: https://raw.githubusercontent.com/xndeye/rule-merger/refs/heads/release/game@cn.srs
 
-[steam@cn-raw-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/xndeye/rule-merger/release/steam@cn.mrs
-[steam@cn-yaml-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/xndeye/rule-merger/release/steam@cn.yaml
-[steam@cn-json-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/xndeye/rule-merger/release/steam@cn.json
-[steam@cn-srs-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/xndeye/rule-merger/release/steam@cn.srs
+[game@cn-raw-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/xndeye/rule-merger/release/game@cn.mrs
+[game@cn-yaml-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/xndeye/rule-merger/release/game@cn.yaml
+[game@cn-json-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/xndeye/rule-merger/release/game@cn.json
+[game@cn-srs-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/xndeye/rule-merger/release/game@cn.srs
 
-[steam@cn-raw-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@release/steam@cn.mrs
-[steam@cn-yaml-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@release/steam@cn.yaml
-[steam@cn-json-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@release/steam@cn.json
-[steam@cn-srs-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@release/steam@cn.srs
+[game@cn-raw-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@release/game@cn.mrs
+[game@cn-yaml-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@release/game@cn.yaml
+[game@cn-json-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@release/game@cn.json
+[game@cn-srs-jsdelivr]: https://fastly.jsdelivr.net/gh/xndeye/rule-merger@release/game@cn.srs
 
 [ai-raw]: https://raw.githubusercontent.com/xndeye/rule-merger/refs/heads/release/ai.mrs
 [ai-yaml]: https://raw.githubusercontent.com/xndeye/rule-merger/refs/heads/release/ai.yaml

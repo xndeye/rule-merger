@@ -5,7 +5,7 @@
   upstream: &reject_upstream
     xndeye_reject:
       type: http
-      url: https://raw.githubusercontent.com/xndeye/adblock_list/refs/heads/release/clash.yaml
+      url: https://raw.githubusercontent.com/xndeye/adblock_list/release/clash.yaml
       format: yaml
       behavior: domain
 
@@ -72,19 +72,14 @@
       behavicloudflareor: classical
     geosite_cn:
       type: http
-      url: https://github.com/DustinWin/domain-list-custom/releases/download/domains/cn-lite.list
-      format: text
-      behavior: classical
-    cloudflare@cn:
-      type: http
-      url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/classical/cloudflare%40cn.list
+      url: https://raw.githubusercontent.com/DustinWin/ruleset_geodata/mihomo-ruleset/cn.list
       format: text
       behavior: domain
-    byte-dance:
+    cloudflare@cn:
       type: http
-      url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ByteDance/ByteDance.yaml
-      format: yaml
-      behavior: classical
+      url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cloudflare%40cn.list
+      format: text
+      behavior: domain
 
 - path: output/direct.yaml
   format: yaml
@@ -123,7 +118,7 @@
       behavior: ipcidr
     geoip_cn:
       type: http
-      url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/cn.list
+      url: https://raw.githubusercontent.com/DustinWin/ruleset_geodata/mihomo-ruleset/cnip.list
       format: text
       behavior: ipcidr
 
@@ -154,9 +149,9 @@
       behavior: classical
     DustinWin_microsoft_cn:
       type: http
-      url: https://github.com/DustinWin/domain-list-custom/releases/download/domains/microsoft-cn.list
+      url: https://raw.githubusercontent.com/DustinWin/ruleset_geodata/mihomo-ruleset/microsoft-cn.list
       format: text
-      behavior: classical
+      behavior: domain
     local_microsoft_cn:
       type: file
       path: local/microsoft@cn.yaml
@@ -200,7 +195,7 @@
       behavior: domain
     DustinWin_apple_cn:
       type: http
-      url: https://github.com/DustinWin/domain-list-custom/releases/download/domains/apple-cn.list
+      url: https://raw.githubusercontent.com/DustinWin/ruleset_geodata/mihomo-ruleset/apple-cn.list
       format: text
       behavior: classical
 
@@ -219,31 +214,31 @@
   behavior: sing-box
   upstream: *apple_cn_upstream
 
-# steam@cn
-- path: output/steam@cn.mrs
+# game@cn
+- path: output/game@cn.mrs
   format: mrs
   behavior: domain
-  upstream: &steam_cn_upstream
-    blackmatrix7_steam_cn:
+  upstream: &game_cn_upstream
+    DustinWin_games_cn:
       type: http
-      url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/SteamCN/SteamCN.yaml
-      format: yaml
-      behavior: classical
+      url: https://raw.githubusercontent.com/DustinWin/ruleset_geodata/mihomo-ruleset/games-cn.list
+      format: text
+      behavior: domain
 
-- path: output/steam@cn.yaml
+- path: output/game@cn.yaml
   format: yaml
   behavior: classical
-  upstream: *steam_cn_upstream
+  upstream: *game_cn_upstream
 
-- path: output/steam@cn.json
+- path: output/game@cn.json
   format: json
   behavior: sing-box
-  upstream: *steam_cn_upstream
+  upstream: *game_cn_upstream
 
-- path: output/steam@cn.srs
+- path: output/game@cn.srs
   format: srs
   behavior: sing-box
-  upstream: *steam_cn_upstream
+  upstream: *game_cn_upstream
 
 # ai
 - path: output/ai.mrs
@@ -257,14 +252,9 @@
       behavior: classical
     DustinWin_ai:
       type: http
-      url: https://github.com/DustinWin/domain-list-custom/releases/download/domains/ai.list
+      url: https://raw.githubusercontent.com/DustinWin/ruleset_geodata/mihomo-ruleset/ai.list
       format: text
-      behavior: classical
-    ACL4SSR_ai:
-      type: http
-      url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/AI.list
-      format: text
-      behavior: classical
+      behavior: doamin
     local_ai:
       type: file
       path: local/ai.yaml
@@ -333,12 +323,12 @@
       behavior: classical
     gfw:
       type: http
-      url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/gfw.list
+      url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/gfw.list
       format: text
       behavior: domain
     google_cn:
       type: http
-      url: https://github.com/DustinWin/domain-list-custom/releases/download/domains/google-cn.list
+      url: https://raw.githubusercontent.com/DustinWin/ruleset_geodata/mihomo-ruleset/google-cn.list
       format: text
       behavior: classical
     skk_biliintl:
@@ -348,7 +338,7 @@
       behavior: classical
     bytedance@!cn:
       type: http
-      url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/bytedance%40!cn.list
+      url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/bytedance%40!cn.list
       format: text
       behavior: domain
 
@@ -410,7 +400,7 @@
   upstream: &lan_ip_upstream
     private:
       type: http
-      url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/private.yaml
+      url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.yaml
       format: yaml
       behavior: ipcidr
 
