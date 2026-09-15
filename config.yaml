@@ -80,6 +80,11 @@
       url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/classical/cloudflare%40cn.list
       format: text
       behavior: domain
+    byte-dance:
+      type: http
+      url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ByteDance/ByteDance.yaml
+      format: yaml
+      behavior: classical
 
 - path: output/direct.yaml
   format: yaml
