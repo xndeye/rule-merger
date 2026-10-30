@@ -197,7 +197,7 @@
       type: http
       url: https://raw.githubusercontent.com/DustinWin/ruleset_geodata/mihomo-ruleset/apple-cn.list
       format: text
-      behavior: classical
+      behavior: domain
 
 - path: output/apple@cn.yaml
   format: yaml
@@ -321,24 +321,19 @@
       path: local/proxy.yaml
       format: yaml
       behavior: classical
-    gfw:
+    DustinWin_proxy:
       type: http
-      url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/gfw.list
+      url: https://raw.githubusercontent.com/DustinWin/ruleset_geodata/mihomo-ruleset/proxy.list
       format: text
       behavior: domain
     google_cn:
       type: http
       url: https://raw.githubusercontent.com/DustinWin/ruleset_geodata/mihomo-ruleset/google-cn.list
       format: text
-      behavior: classical
+      behavior: domain
     skk_biliintl:
       type: http
-      url: https://ruleset.skk.moe/Clash/non_ip/stream_biliintl.txt
-      format: text
-      behavior: classical
-    bytedance@!cn:
-      type: http
-      url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/bytedance%40!cn.list
+      url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/bilibili.list
       format: text
       behavior: domain
 
@@ -400,8 +395,14 @@
   upstream: &lan_ip_upstream
     private:
       type: http
-      url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.yaml
-      format: yaml
+      url: https://raw.githubusercontent.com/DustinWin/ruleset_geodata/mihomo-ruleset/private.list
+      format: text
+      behavior: domain
+
+    DustinWin_private:
+      type: http
+      url: https://raw.githubusercontent.com/DustinWin/ruleset_geodata/mihomo-ruleset/privateip.list
+      format: text
       behavior: ipcidr
 
 - path: output/lan@ip.yaml
@@ -430,6 +431,12 @@
       format: text
       behavior: classical
 
+    DustinWin_private:
+      type: http
+      url: https://raw.githubusercontent.com/DustinWin/ruleset_geodata/mihomo-ruleset/private.list
+      format: text
+      behavior: domain
+
 - path: output/lan.yaml
   format: yaml
   behavior: classical
@@ -453,6 +460,12 @@
     skk_fake_ip_filter:
       type: http
       url: https://ruleset.skk.moe/Clash/domainset/clash_fake_ip_filter.txt
+      format: text
+      behavior: domain
+
+    DustinWin_fakeip-filter:
+      type: http
+      url: https://raw.githubusercontent.com/DustinWin/ruleset_geodata/mihomo-ruleset/fakeip-filter.list
       format: text
       behavior: domain
 

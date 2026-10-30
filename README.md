@@ -77,8 +77,7 @@
 ## 引用来源
 
 - [Sukka Ruleset](https://ruleset.skk.moe)
-- [Loyalsoldier/clash-rules](https://github.com/Loyalsoldier/clash-rules)
-- [DustinWin/domain-list-custom](https://github.com/DustinWin/domain-list-custom)
+- [DustinWin/ruleset_geodata](https://github.com/DustinWin/ruleset_geodata)
 - [xndeye/adblock_list](https://github.com/xndeye/adblock_list)
 
 ---
