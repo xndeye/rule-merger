@@ -333,9 +333,9 @@
       behavior: domain
     skk_biliintl:
       type: http
-      url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/bilibili.list
+      url: https://ruleset.skk.moe/Clash/non_ip/stream_biliintl.txt
       format: text
-      behavior: domain
+      behavior: classical
 
 - path: output/proxy.yaml
   format: yaml
