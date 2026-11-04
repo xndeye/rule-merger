@@ -9,7 +9,33 @@
 - [x] 支持 `domain`、`ipcidr`、`classical`、`sing-box` 规则格式
 - [x] 支持规则格式互转
 
-## 如何使用
+### 规则列表
+
+| 文件            | 介绍             |          github           |            ghproxy            |            jsdelivr            |
+|-----------------|:-----------------|:-------------------------:|:-----------------------------:|:------------------------------:|
+| `reject`        | 广告域名         | [mrs][reject-raw] [yaml][reject-yaml] [json][reject-json] [srs][reject-srs] | [mrs][reject-raw-ghproxy] [yaml][reject-yaml-ghproxy] [json][reject-json-ghproxy] [srs][reject-srs-ghproxy] | [mrs][reject-raw-jsdelivr] [yaml][reject-yaml-jsdelivr] [json][reject-json-jsdelivr] [srs][reject-srs-jsdelivr] |
+| `reject@ip`     | 广告IP           | [mrs][reject@ip-raw] [yaml][reject@ip-yaml] [json][reject@ip-json] [srs][reject@ip-srs] | [mrs][reject@ip-raw-ghproxy] [yaml][reject@ip-yaml-ghproxy] [json][reject@ip-json-ghproxy] [srs][reject@ip-srs-ghproxy] | [mrs][reject@ip-raw-jsdelivr] [yaml][reject@ip-yaml-jsdelivr] [json][reject@ip-json-jsdelivr] [srs][reject@ip-srs-jsdelivr] |
+| `direct`        | 推荐直连域名     | [mrs][direct-raw] [yaml][direct-yaml] [json][direct-json] [srs][direct-srs] | [mrs][direct-raw-ghproxy] [yaml][direct-yaml-ghproxy] [json][direct-json-ghproxy] [srs][direct-srs-ghproxy] | [mrs][direct-raw-jsdelivr] [yaml][direct-yaml-jsdelivr] [json][direct-json-jsdelivr] [srs][direct-srs-jsdelivr] |
+| `direct@ip`     | 推荐直连IP       | [mrs][direct@ip-raw] [yaml][direct@ip-yaml] [json][direct@ip-json] [srs][direct@ip-srs] | [mrs][direct@ip-raw-ghproxy] [yaml][direct@ip-yaml-ghproxy] [json][direct@ip-json-ghproxy] [srs][direct@ip-srs-ghproxy] | [mrs][direct@ip-raw-jsdelivr] [yaml][direct@ip-yaml-jsdelivr] [json][direct@ip-json-jsdelivr] [srs][direct@ip-srs-jsdelivr] |
+| `microsoft@cn`  | 微软中国域名     | [mrs][microsoft@cn-raw] [yaml][microsoft@cn-yaml] [json][microsoft@cn-json] [srs][microsoft@cn-srs] | [mrs][microsoft@cn-raw-ghproxy] [yaml][microsoft@cn-yaml-ghproxy] [json][microsoft@cn-json-ghproxy] [srs][microsoft@cn-srs-ghproxy] | [mrs][microsoft@cn-raw-jsdelivr] [yaml][microsoft@cn-yaml-jsdelivr] [json][microsoft@cn-json-jsdelivr] [srs][microsoft@cn-srs-jsdelivr] |
+| `apple@cn`      | 苹果中国域名     | [mrs][apple@cn-raw] [yaml][apple@cn-yaml] [json][apple@cn-json] [srs][apple@cn-srs] | [mrs][apple@cn-raw-ghproxy] [yaml][apple@cn-yaml-ghproxy] [json][apple@cn-json-ghproxy] [srs][apple@cn-srs-ghproxy] | [mrs][apple@cn-raw-jsdelivr] [yaml][apple@cn-yaml-jsdelivr] [json][apple@cn-json-jsdelivr] [srs][apple@cn-srs-jsdelivr] |
+| `game@cn`       | 游戏相关中国域名 | [mrs][game@cn-raw] [yaml][game@cn-yaml] [json][game@cn-json] [srs][game@cn-srs] | [mrs][game@cn-raw-ghproxy] [yaml][game@cn-yaml-ghproxy] [json][game@cn-json-ghproxy] [srs][game@cn-srs-ghproxy] | [mrs][game@cn-raw-jsdelivr] [yaml][game@cn-yaml-jsdelivr] [json][game@cn-json-jsdelivr] [srs][game@cn-srs-jsdelivr] |
+| `ai`            | AI相关域名       | [mrs][ai-raw] [yaml][ai-yaml] [json][ai-json] [srs][ai-srs] | [mrs][ai-raw-ghproxy] [yaml][ai-yaml-ghproxy] [json][ai-json-ghproxy] [srs][ai-srs-ghproxy] | [mrs][ai-raw-jsdelivr] [yaml][ai-yaml-jsdelivr] [json][ai-json-jsdelivr] [srs][ai-srs-jsdelivr] |
+| `proxy`         | 推荐代理域名     | [mrs][proxy-raw] [yaml][proxy-yaml] [json][proxy-json] [srs][proxy-srs] | [mrs][proxy-raw-ghproxy] [yaml][proxy-yaml-ghproxy] [json][proxy-json-ghproxy] [srs][proxy-srs-ghproxy] | [mrs][proxy-raw-jsdelivr] [yaml][proxy-yaml-jsdelivr] [json][proxy-json-jsdelivr] [srs][proxy-srs-jsdelivr] |
+| `proxy@ip`      | 推荐代理IP       | [mrs][proxy@ip-raw] [yaml][proxy@ip-yaml] [json][proxy@ip-json] [srs][proxy@ip-srs] | [mrs][proxy@ip-raw-ghproxy] [yaml][proxy@ip-yaml-ghproxy] [json][proxy@ip-json-ghproxy] [srs][proxy@ip-srs-ghproxy] | [mrs][proxy@ip-raw-jsdelivr] [yaml][proxy@ip-yaml-jsdelivr] [json][proxy@ip-json-jsdelivr] [srs][proxy@ip-srs-jsdelivr] |
+| `lan@ip`        | 局域网IP         | [mrs][lan@ip-raw] [yaml][lan@ip-yaml] [json][lan@ip-json] [srs][lan@ip-srs] | [mrs][lan@ip-raw-ghproxy] [yaml][lan@ip-yaml-ghproxy] [json][lan@ip-json-ghproxy] [srs][lan@ip-srs-ghproxy] | [mrs][lan@ip-raw-jsdelivr] [yaml][lan@ip-yaml-jsdelivr] [json][lan@ip-json-jsdelivr] [srs][lan@ip-srs-jsdelivr] |
+| `lan`           | 局域网域名       | [mrs][lan-raw] [yaml][lan-yaml] [json][lan-json] [srs][lan-srs] | [mrs][lan-raw-ghproxy] [yaml][lan-yaml-ghproxy] [json][lan-json-ghproxy] [srs][lan-srs-ghproxy] | [mrs][lan-raw-jsdelivr] [yaml][lan-yaml-jsdelivr] [json][lan-json-jsdelivr] [srs][lan-srs-jsdelivr] |
+| `fakeip-filter` | fakeIP过滤       | [mrs][fakeip-filter-raw] [yaml][fakeip-filter-yaml] [json][fakeip-filter-json] [srs][fakeip-filter-srs] | [mrs][fakeip-filter-raw-ghproxy] [yaml][fakeip-filter-yaml-ghproxy] [json][fakeip-filter-json-ghproxy] [srs][fakeip-filter-srs-ghproxy] | [mrs][fakeip-filter-raw-jsdelivr] [yaml][fakeip-filter-yaml-jsdelivr] [json][fakeip-filter-json-jsdelivr] [srs][fakeip-filter-srs-jsdelivr] |
+
+<details>
+<summary>引用来源</summary>
+<ul>
+    <li><a href="https://ruleset.skk.moe">Sukka Ruleset</a></li>
+    <li><a href="https://github.com/DustinWin/ruleset_geodata">DustinWin/ruleset_geodata</a></li>
+    <li><a href="https://github.com/xndeye/adblock_list">xndeye/adblock_list</a></li>
+</details>
+
+### 构建指南
 
 > [!TIP]
 > 亦可 Fork 本仓库后使用 Actions 进行自动化构建
@@ -55,30 +81,6 @@
    ```shell
    python rule_merger.py
    ```
-
-## 规则列表
-
-| 文件            | 介绍             |          github           |            ghproxy            |            jsdelivr            |
-|-----------------|:-----------------|:-------------------------:|:-----------------------------:|:------------------------------:|
-| `reject`        | 广告域名         | [mrs][reject-raw] [yaml][reject-yaml] [json][reject-json] [srs][reject-srs] | [mrs][reject-raw-ghproxy] [yaml][reject-yaml-ghproxy] [json][reject-json-ghproxy] [srs][reject-srs-ghproxy] | [mrs][reject-raw-jsdelivr] [yaml][reject-yaml-jsdelivr] [json][reject-json-jsdelivr] [srs][reject-srs-jsdelivr] |
-| `reject@ip`     | 广告IP           | [mrs][reject@ip-raw] [yaml][reject@ip-yaml] [json][reject@ip-json] [srs][reject@ip-srs] | [mrs][reject@ip-raw-ghproxy] [yaml][reject@ip-yaml-ghproxy] [json][reject@ip-json-ghproxy] [srs][reject@ip-srs-ghproxy] | [mrs][reject@ip-raw-jsdelivr] [yaml][reject@ip-yaml-jsdelivr] [json][reject@ip-json-jsdelivr] [srs][reject@ip-srs-jsdelivr] |
-| `direct`        | 推荐直连域名     | [mrs][direct-raw] [yaml][direct-yaml] [json][direct-json] [srs][direct-srs] | [mrs][direct-raw-ghproxy] [yaml][direct-yaml-ghproxy] [json][direct-json-ghproxy] [srs][direct-srs-ghproxy] | [mrs][direct-raw-jsdelivr] [yaml][direct-yaml-jsdelivr] [json][direct-json-jsdelivr] [srs][direct-srs-jsdelivr] |
-| `direct@ip`     | 推荐直连IP       | [mrs][direct@ip-raw] [yaml][direct@ip-yaml] [json][direct@ip-json] [srs][direct@ip-srs] | [mrs][direct@ip-raw-ghproxy] [yaml][direct@ip-yaml-ghproxy] [json][direct@ip-json-ghproxy] [srs][direct@ip-srs-ghproxy] | [mrs][direct@ip-raw-jsdelivr] [yaml][direct@ip-yaml-jsdelivr] [json][direct@ip-json-jsdelivr] [srs][direct@ip-srs-jsdelivr] |
-| `microsoft@cn`  | 微软中国域名     | [mrs][microsoft@cn-raw] [yaml][microsoft@cn-yaml] [json][microsoft@cn-json] [srs][microsoft@cn-srs] | [mrs][microsoft@cn-raw-ghproxy] [yaml][microsoft@cn-yaml-ghproxy] [json][microsoft@cn-json-ghproxy] [srs][microsoft@cn-srs-ghproxy] | [mrs][microsoft@cn-raw-jsdelivr] [yaml][microsoft@cn-yaml-jsdelivr] [json][microsoft@cn-json-jsdelivr] [srs][microsoft@cn-srs-jsdelivr] |
-| `apple@cn`      | 苹果中国域名     | [mrs][apple@cn-raw] [yaml][apple@cn-yaml] [json][apple@cn-json] [srs][apple@cn-srs] | [mrs][apple@cn-raw-ghproxy] [yaml][apple@cn-yaml-ghproxy] [json][apple@cn-json-ghproxy] [srs][apple@cn-srs-ghproxy] | [mrs][apple@cn-raw-jsdelivr] [yaml][apple@cn-yaml-jsdelivr] [json][apple@cn-json-jsdelivr] [srs][apple@cn-srs-jsdelivr] |
-| `game@cn`       | 游戏相关中国域名 | [mrs][game@cn-raw] [yaml][game@cn-yaml] [json][game@cn-json] [srs][game@cn-srs] | [mrs][game@cn-raw-ghproxy] [yaml][game@cn-yaml-ghproxy] [json][game@cn-json-ghproxy] [srs][game@cn-srs-ghproxy] | [mrs][game@cn-raw-jsdelivr] [yaml][game@cn-yaml-jsdelivr] [json][game@cn-json-jsdelivr] [srs][game@cn-srs-jsdelivr] |
-| `ai`            | AI相关域名       | [mrs][ai-raw] [yaml][ai-yaml] [json][ai-json] [srs][ai-srs] | [mrs][ai-raw-ghproxy] [yaml][ai-yaml-ghproxy] [json][ai-json-ghproxy] [srs][ai-srs-ghproxy] | [mrs][ai-raw-jsdelivr] [yaml][ai-yaml-jsdelivr] [json][ai-json-jsdelivr] [srs][ai-srs-jsdelivr] |
-| `proxy`         | 推荐代理域名     | [mrs][proxy-raw] [yaml][proxy-yaml] [json][proxy-json] [srs][proxy-srs] | [mrs][proxy-raw-ghproxy] [yaml][proxy-yaml-ghproxy] [json][proxy-json-ghproxy] [srs][proxy-srs-ghproxy] | [mrs][proxy-raw-jsdelivr] [yaml][proxy-yaml-jsdelivr] [json][proxy-json-jsdelivr] [srs][proxy-srs-jsdelivr] |
-| `proxy@ip`      | 推荐代理IP       | [mrs][proxy@ip-raw] [yaml][proxy@ip-yaml] [json][proxy@ip-json] [srs][proxy@ip-srs] | [mrs][proxy@ip-raw-ghproxy] [yaml][proxy@ip-yaml-ghproxy] [json][proxy@ip-json-ghproxy] [srs][proxy@ip-srs-ghproxy] | [mrs][proxy@ip-raw-jsdelivr] [yaml][proxy@ip-yaml-jsdelivr] [json][proxy@ip-json-jsdelivr] [srs][proxy@ip-srs-jsdelivr] |
-| `lan@ip`        | 局域网IP         | [mrs][lan@ip-raw] [yaml][lan@ip-yaml] [json][lan@ip-json] [srs][lan@ip-srs] | [mrs][lan@ip-raw-ghproxy] [yaml][lan@ip-yaml-ghproxy] [json][lan@ip-json-ghproxy] [srs][lan@ip-srs-ghproxy] | [mrs][lan@ip-raw-jsdelivr] [yaml][lan@ip-yaml-jsdelivr] [json][lan@ip-json-jsdelivr] [srs][lan@ip-srs-jsdelivr] |
-| `lan`           | 局域网域名       | [mrs][lan-raw] [yaml][lan-yaml] [json][lan-json] [srs][lan-srs] | [mrs][lan-raw-ghproxy] [yaml][lan-yaml-ghproxy] [json][lan-json-ghproxy] [srs][lan-srs-ghproxy] | [mrs][lan-raw-jsdelivr] [yaml][lan-yaml-jsdelivr] [json][lan-json-jsdelivr] [srs][lan-srs-jsdelivr] |
-| `fakeip-filter` | fakeIP过滤       | [mrs][fakeip-filter-raw] [yaml][fakeip-filter-yaml] [json][fakeip-filter-json] [srs][fakeip-filter-srs] | [mrs][fakeip-filter-raw-ghproxy] [yaml][fakeip-filter-yaml-ghproxy] [json][fakeip-filter-json-ghproxy] [srs][fakeip-filter-srs-ghproxy] | [mrs][fakeip-filter-raw-jsdelivr] [yaml][fakeip-filter-yaml-jsdelivr] [json][fakeip-filter-json-jsdelivr] [srs][fakeip-filter-srs-jsdelivr] |
-
-## 引用来源
-
-- [Sukka Ruleset](https://ruleset.skk.moe)
-- [DustinWin/ruleset_geodata](https://github.com/DustinWin/ruleset_geodata)
-- [xndeye/adblock_list](https://github.com/xndeye/adblock_list)
 
 ---
 
